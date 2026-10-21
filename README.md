@@ -1,128 +1,187 @@
 # Hostel Management System
-SUBJECT: OBJECT ORIENTED PROGRAMMING 
-- Make a  class naming management for all calculations 
-There are four hostels(3 boys and a girls) under the manager. Each of this hostel has : 
-- Separate hostel mess system. 
-- One cook for kitchen. 
--	Four sweepers. 
--	Five guards. 
--	One serving boy. 
- 
--	Management has five subclasses salary, hostel 1, 2, 3 and girls hostel. 
-Enter the number of students in each hostel and save their credentials meaning name, roll number and ID card number in four different files namely hostel 1, hostel 2, hostel 3 and girls hostel.  
-Minimum residents are 200 per hostel. 
--	Each sub class(eg hostel1) has further sub classes naming mess, guests, clothes and security system  
-# Subclass mess: 
-Mess menu should be designed according to the user for the whole month. 
-Mess system serves two times to students who are willing to eat. 
-There should be files naming mess1, mess2, mess3 and mess4 which has record of last thirty days of all the students. Data in the files are altered on the end of each day. eg(Mess1 will be the mess file for hostel1.There are two entries per day done by two members breakfast and dinner) Subclass Guests: 
-Three guests are allowed for each student and every student has guests two days per month (mandatory). 
-Students should tell management of guests one day earlier. 
-Make another file which shows guess list of each student and there total bill of mess of their guests.  
-eg(Guest list for hostel1 will be named guest1.Entries are done through members ID and use function guest_total for making total for each student.) 
- 
- 
-# Subclass Clothes: 
-- There is a private cloth management system which cost Rs.5/piece for ironing and 12 /piece for washing. 
-- 15% for each clothing piece goes to hostel management. 
-- Every student uses this facility at least once a week. 
-- A file is created for the total money gathered from washing and ironing and hostels share in it. 
-eg(for hostel1 file name will be clothes1 and wash and iron are two members of this subclass.) 
-# Subclass Security system: 
-Make a file for guest id card numbers for each student of the whole month. 
-Make another file for night day shifts of four guards and one chief in control room. Make a file for the extra curricular activities which includes trip per weekend and bonfire once a month. 
-Make another file for the lost found items for all the students. In this file every item of hostel lost is fined as per requirement like lost key should be fined with 100 rupees. 
-eg(for security1 file names are guestid, guardshift and LFitems) Subclass Salary: 
-Make another file which includes the salaries of the following people. 
--	Manager 25k, 
--	Guard 15k, 
--	Cook 15k, 
--	Sweeper 10k, 
--	Serving boy 5k. These salaries should be adjusted from the bill of the students. 
-# Class management: 
-Every student at the end of the month total bill for each student should be calculated as follows: 
--	Mess  
--	Guest mess 
--	Lost/found fine 
-A file should be created which has separate salary and hostel profit. 
-Create a way to show the total dues of any student whose idcard no. is entered. 
 
+A C++ console-based application developed as an **Object-Oriented Programming (OOP)** project to simplify hostel administration. The system manages student records, mess services, guest expenses, laundry charges, security operations, staff salaries, and monthly student dues across four hostels.
 
-## Overview
-The Hostel Management System is a comprehensive software application designed to manage the various aspects of hostel administration, including student management, mess management, guest management, clothes management, security management, salary management, and account management.
+## 📌 Project Overview
 
-## Features
-- **Student Management**: Add, view, update, delete student records, and manage fines.
-- **Mess Management**: Add, view, update, and delete mess records.
-- **Guest Management**: Add, view, update, and delete guest records.
-- **Clothes Management**: Add, view, update, and delete clothes records.
-- **Security Management**: Add, view, update, and delete security incidents.
-- **Salary Management**: Add, view, update, and delete salary records.
-- **Account Management**: Add, view, update, and delete account records.
+The system supports three boys' hostels and one girls' hostel, with separate management modules and file-based recordkeeping. It is designed around a central management class and specialized classes for hostel operations.
 
-## Usage
-Upon running the program, users can select the hostel they wish to manage (e.g., Boy Hostel 1, Boy Hostel 2, Boy Hostel 3, Girl Hostel). Within each hostel, users can navigate through various management systems to perform CRUD operations (Create, Read, Update, Delete).
+## ✨ Features
+
+### 🏠 Hostel Management
+- Manage three boys' hostels and one girls' hostel.
+- Maintain separate records for each hostel.
+- Support student registration and record management.
+- Designed around a minimum of 200 residents per hostel.
+
+### 👨‍🎓 Student Management
+- Add, view, update, and delete student records.
+- Store student names, roll numbers, and ID card numbers.
+- Retrieve student dues using an ID card number.
+- Manage student fines and monthly billing records.
+
+### 🍽️ Mess Management
+- Maintain separate mess records for all four hostels.
+- Organize monthly menus and meal records.
+- Track breakfast and dinner participation.
+- Maintain records covering a 30-day period.
+
+### 👥 Guest Management
+- Record student guest details and guest meals.
+- Maintain separate guest records for each hostel.
+- Calculate guest meal expenses using a dedicated total-calculation function.
+
+### 👕 Clothes Management
+- Track laundry and ironing services.
+- Washing charge: **Rs. 12 per piece**
+- Ironing charge: **Rs. 5 per piece**
+- Calculate the hostel's 15% share of clothing-service revenue.
+
+### 🛡️ Security Management
+- Maintain guest ID card records.
+- Organize guard shifts and control-room staffing.
+- Record extracurricular activities, including weekend trips and monthly bonfires.
+- Track lost and found items and applicable fines.
+
+### 💰 Salary Management
+Manage the specified monthly salaries:
+
+| Staff Position | Monthly Salary |
+|---|---:|
+| Manager | Rs. 25,000 |
+| Guard | Rs. 15,000 |
+| Cook | Rs. 15,000 |
+| Sweeper | Rs. 10,000 |
+| Serving Boy | Rs. 5,000 |
+
+### 📊 Accounts and Billing
+- Calculate student expenses at the end of the month.
+- Combine applicable mess charges, guest meal expenses, and fines.
+- Maintain salary and hostel-profit records.
+- Calculate and display outstanding dues for a student using their ID card number.
+
+## 🛠️ Technologies Used
+
+- **C++** — Core application logic
+- **Object-Oriented Programming** — Classes, subclasses, and modular management
+- **File Handling** — Persistent storage of student, mess, guest, clothing, security, and financial records
+- **Console Interface** — Menu-driven user interaction
+
+## 📋 Application Menu
 
 ### Main Menu
-```bash
-========================================================================================
-HOSTEL MANAGEMENT SYSTEM
-    === >>  Press 1 for Boy Hostel1
-    === >>  Press 2 for Boy Hostel2
-    === >>  Press 3 for Boy Hostel3
-    === >>  Press 4 for Girl Hostel
-    === >>  Press 5 to Exit
+
+```text
+========================================
+       HOSTEL MANAGEMENT SYSTEM
+========================================
+Press 1 for Boy Hostel 1
+Press 2 for Boy Hostel 2
+Press 3 for Boy Hostel 3
+Press 4 for Girls Hostel
+Press 5 to Exit
+========================================
 ```
 
-### Submenu Example
-```bash
-========================================================================================
-                    (Student Management System)
-========================================================================================
-STUDENT MANAGEMENT SYSTEM
-    --- >> Press 1 to Add Student
-    --- >> Press 2 to View Students
-    --- >> Press 3 to Update Student
-    --- >> Press 4 to Delete Student
-    --- >> Press 5 to Manage Fines
-    --- >> Press 9 to Return to Previous Menu
-    --- >> Press 1 to Add Student
-    --- >> Press 2 to View Students
-    --- >> Press 3 to Update Student
-    --- >> Press 4 to Delete Student
-    --- >> Press 5 to Manage Fines
-    --- >> Press 9 to Return to Previous Menu
+### Student Management Menu
+
+```text
+========================================
+       STUDENT MANAGEMENT SYSTEM
+========================================
+Press 1 to Add Student
+Press 2 to View Students
+Press 3 to Update Student
+Press 4 to Delete Student
+Press 5 to Manage Fines
+Press 9 to Return to Previous Menu
+========================================
 ```
 
-## Installation
-1. Clone the repository:
-    ```sh
-    git clone https://github.com/your-username/hostel-management-system.git
-    ```
-2. Navigate to the project directory:
-    ```sh
-    cd hostel-management-system
-    ```
-3. Compile the code using a C++ compiler:
-    ```sh
-    g++ main.cpp -o hostel_management_system
-    ```
-4. Run the executable:
-    ```sh
-    ./hostel_management_system
-    ```
+## 🚀 Installation and Execution
 
-## Expected Output
-- Users will interact with the system via a command-line interface.
-- Menus will guide the user to perform various operations.
-- Success and error messages will be displayed accordingly.
+### Prerequisites
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- A C++ compiler, such as GCC or MinGW
+- A terminal or command prompt
 
+### 1. Clone the Repository
 
-## Contact
-For any questions or suggestions, please contact [usmanazulfiqar2001@gmail.com](mailto:usmanazulfiqar2001@gmail.com).
+```bash
+git clone https://github.com/usmana0820/Hostel-Management-System.git
+```
 
+### 2. Navigate to the Project Directory
 
+```bash
+cd Hostel-Management-System
+```
 
+### 3. Compile the Program
+
+The main source file in this repository is named `Hostel management system.cpp`. Compile it using:
+
+```bash
+g++ "Hostel management system.cpp" -o hostel_management_system
+```
+
+### 4. Run the Application
+
+**Windows:**
+
+```bash
+hostel_management_system.exe
+```
+
+**Linux/macOS:**
+
+```bash
+./hostel_management_system
+```
+
+## 📁 Repository Structure
+
+```text
+Hostel-Management-System/
+├── Hostel management system.cpp
+├── Question with Output.pdf
+├── LICENSE
+└── README.md
+```
+
+## 🎯 Learning Objectives
+
+This project demonstrates practical applications of:
+
+- Object-oriented programming and class relationships
+- File handling and persistent data storage
+- Menu-driven console application development
+- Financial calculations and record management
+- Modular software design and problem-solving
+
+## 🔮 Potential Improvements
+
+- Add input validation and duplicate student-ID checks.
+- Introduce backups and safer file-update operations.
+- Improve monthly financial reports and hostel-wise profit summaries.
+- Add automated tests for billing, salaries, and guest expenses.
+- Implement authentication and role-based access for administrators.
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## 📬 Contact
+
+- **GitHub:** [@usmana0820](https://github.com/usmana0820)
+- **Email:** usmanazulfiqar20@gmail.com
+
+## 👩‍💻 Developer
+
+**Usmana Zulfiqar**
+
+C++ Development | Object-Oriented Programming | File Handling
+
+---
+
+*Developed as an academic project to explore object-oriented programming through practical hostel administration and financial management.*
